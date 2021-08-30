@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+
+.NavBar {
+    @apply bg-purple-200 p-6 h-24 flex items-center text-center
+}
+
+.NavBar-items {
+    @apply text-center
+}
+
+.Form-wrapper {
+    @apply mx-auto mt-6 w-10/12
+}
+
+
+@tailwind utilities;
