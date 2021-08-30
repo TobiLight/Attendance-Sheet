@@ -19,7 +19,6 @@ const Form: React.VFC<Props> = ({ users, setUsers }) => {
     })
     const [error, setError] = useState("")
     const [time, setTime] = useState("")
-    const [exist, setExist] = useState(false)
 
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
@@ -34,18 +33,7 @@ const Form: React.VFC<Props> = ({ users, setUsers }) => {
             return
         }
 
-        for (let i = 0; i < users.length; i++) {
-            if ((input.firstname === users[i].firstname) && (input.lastname === users[i].lastname)) {
-                console.log(input.firstname === users[i].firstname && input.lastname === users[i].lastname)
-                setExist(true)
-                break
-            }
-            // setExist(false)
-        }
-        console.log('exist', exist)
-        if (exist) {
-            return setError("You have already signed in")
-        }
+
 
         setUsers([...users, {
             firstname: input.firstname,

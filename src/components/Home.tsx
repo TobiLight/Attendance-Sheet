@@ -38,6 +38,10 @@ const initialUsers: UserInterface[] = [
 function Home(): JSX.Element {
     const [users, setUser] = useState<UserInterface[]>(initialUsers)
 
+    const signuserout = (message: string) => {
+        console.log(message)
+    }
+
     const renderUsers = () => {
         return users.map((user, index) => {
             return (
@@ -45,6 +49,8 @@ function Home(): JSX.Element {
             )
         })
     }
+
+
     return (
         <div>
             <div className="w-3/4 max-h-64 overflow-y-scroll mx-auto mt-8 shadow overflow-x-scroll lg:overflow-x-hidden border-b border-gray-200 sm:rounded-lg">
@@ -53,6 +59,7 @@ function Home(): JSX.Element {
                     {renderUsers()}
                 </table>
             </div>
+            {/* <Table /> */}
             <Form users={users} setUsers={setUser} />
         </div>
 
