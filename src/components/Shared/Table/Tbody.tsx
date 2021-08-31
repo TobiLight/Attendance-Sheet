@@ -1,4 +1,4 @@
-import React, { useState, SetStateAction } from "react"
+import React, { useState } from "react"
 import { UserInterface } from "../../Home"
 import SignoutButton from "../Signout"
 import moment from "moment"

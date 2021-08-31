@@ -38,10 +38,6 @@ const initialUsers: UserInterface[] = [
 function Home(): JSX.Element {
     const [users, setUser] = useState<UserInterface[]>(initialUsers)
 
-    const signuserout = (message: string) => {
-        console.log(message)
-    }
-
     const renderUsers = () => {
         return users.map((user, index) => {
             return (

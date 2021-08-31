@@ -1,4 +1,3 @@
-
 const SignoutButton = (props: { signout: Function }) => {
     return (
         <div>
